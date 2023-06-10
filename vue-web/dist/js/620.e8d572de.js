@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_web"]=self["webpackChunkvue_web"]||[]).push([[620],{2620:function(e,n,u){function t(e,n,u,t,r,c){return" 支持 "}u.r(n),u.d(n,{default:function(){return f}});var r={name:"contactPage"},c=u(89);const a=(0,c.Z)(r,[["render",t]]);var f=a}}]);
+//# sourceMappingURL=620.e8d572de.js.map

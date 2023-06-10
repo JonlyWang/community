@@ -1,0 +1,750 @@
+{
+  "name": "handsontable",
+  "description": "Handsontable is a JavaScript Spreadsheet Component available for React, Angular and Vue.",
+  "homepage": "https://handsontable.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/handsontable/handsontable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/handsontable/handsontable/issues"
+  },
+  "author": "Handsoncode <hello@handsontable.com>",
+  "version": "12.2.0",
+  "main": "index",
+  "module": "index.mjs",
+  "jsnext:main": "index.mjs",
+  "jsdelivr": "dist/handsontable.full.min.js",
+  "unpkg": "dist/handsontable.full.min.js",
+  "keywords": [
+    "data",
+    "grid",
+    "table",
+    "editor",
+    "grid-editor",
+    "data-grid",
+    "data-table",
+    "spreadsheet",
+    "excel",
+    "tabular-data",
+    "edit-cell",
+    "editable-table",
+    "data-spreadsheet"
+  ],
+  "dependencies": {
+    "@types/pikaday": "1.7.4",
+    "core-js": "^3.0.0",
+    "dompurify": "^2.1.1",
+    "moment": "2.29.4",
+    "numbro": "2.1.2",
+    "pikaday": "1.8.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.11.4",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-plugin": "^7.13.16",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.11.2",
+    "@babel/types": "^7.12.12",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^11.0.0-beta.2",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-forbidden-imports": "^0.1.2",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "chalk": "^4.1.0",
+    "concurrently": "^6.4.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "cpy-cli": "^3.1.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^2.1.1",
+    "dtslint": "^4.2.0",
+    "env-cmd": "^9.0.3",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-handsontable": "file:.config/plugin/eslint",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^32.3.3",
+    "execa": "^5.0.0",
+    "fs-extra": "^4.0.2",
+    "glob": "^7.1.2",
+    "html-parse-stringify": "^2.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.3",
+    "jasmine-co": "^1.2.2",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-core": "^3.4.0",
+    "jasmine-terminal-reporter": "^1.0.3",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "jsdom": "^15.2.1",
+    "jsdom-global": "^3.0.2",
+    "loader-utils": "^1.1.0",
+    "lodash": "^4.17.20",
+    "mini-css-extract-plugin": "^0.5.0",
+    "minimatch": "^3.0.4",
+    "on-build-webpack": "^0.1.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "progress-bar-webpack-plugin": "^1.10.0",
+    "puppeteer": "^10.2.0",
+    "replace-in-file": "^6.1.0",
+    "rimraf": "^2.5.4",
+    "sass": "^1.3.0",
+    "sass-loader": "^10.2.0",
+    "string-replace-webpack-plugin": "^0.1.3",
+    "style-loader": "^0.18.2",
+    "stylelint": "^13.3.3",
+    "typescript": "3.8.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.0"
+  },
+  "optionalDependencies": {
+    "hyperformula": "^2.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "typings": "./index.d.ts",
+  "sideEffects": [
+    "**/*.css",
+    "./languages/*"
+  ],
+  "exports": {
+    "./cellTypes/autocompleteType/index.d.ts": "./cellTypes/autocompleteType/index.d.ts",
+    "./cellTypes/autocompleteType": {
+      "require": "./cellTypes/autocompleteType/index.js",
+      "import": "./cellTypes/autocompleteType/index.mjs"
+    },
+    "./cellTypes/checkboxType/index.d.ts": "./cellTypes/checkboxType/index.d.ts",
+    "./cellTypes/checkboxType": {
+      "require": "./cellTypes/checkboxType/index.js",
+      "import": "./cellTypes/checkboxType/index.mjs"
+    },
+    "./cellTypes/dateType/index.d.ts": "./cellTypes/dateType/index.d.ts",
+    "./cellTypes/dateType": {
+      "require": "./cellTypes/dateType/index.js",
+      "import": "./cellTypes/dateType/index.mjs"
+    },
+    "./cellTypes/dropdownType/index.d.ts": "./cellTypes/dropdownType/index.d.ts",
+    "./cellTypes/dropdownType": {
+      "require": "./cellTypes/dropdownType/index.js",
+      "import": "./cellTypes/dropdownType/index.mjs"
+    },
+    "./cellTypes/handsontableType/index.d.ts": "./cellTypes/handsontableType/index.d.ts",
+    "./cellTypes/handsontableType": {
+      "require": "./cellTypes/handsontableType/index.js",
+      "import": "./cellTypes/handsontableType/index.mjs"
+    },
+    "./cellTypes/numericType/index.d.ts": "./cellTypes/numericType/index.d.ts",
+    "./cellTypes/numericType": {
+      "require": "./cellTypes/numericType/index.js",
+      "import": "./cellTypes/numericType/index.mjs"
+    },
+    "./cellTypes/passwordType/index.d.ts": "./cellTypes/passwordType/index.d.ts",
+    "./cellTypes/passwordType": {
+      "require": "./cellTypes/passwordType/index.js",
+      "import": "./cellTypes/passwordType/index.mjs"
+    },
+    "./cellTypes/textType/index.d.ts": "./cellTypes/textType/index.d.ts",
+    "./cellTypes/textType": {
+      "require": "./cellTypes/textType/index.js",
+      "import": "./cellTypes/textType/index.mjs"
+    },
+    "./cellTypes/timeType/index.d.ts": "./cellTypes/timeType/index.d.ts",
+    "./cellTypes/timeType": {
+      "require": "./cellTypes/timeType/index.js",
+      "import": "./cellTypes/timeType/index.mjs"
+    },
+    "./cellTypes/index.d.ts": "./cellTypes/index.d.ts",
+    "./cellTypes": {
+      "require": "./cellTypes/index.js",
+      "import": "./cellTypes/index.mjs"
+    },
+    "./cellTypes/registry.d.ts": "./cellTypes/registry.d.ts",
+    "./cellTypes/registry": {
+      "require": "./cellTypes/registry.js",
+      "import": "./cellTypes/registry.mjs"
+    },
+    "./languages/ar-AR": {
+      "require": "./languages/ar-AR.js",
+      "import": "./languages/ar-AR.mjs"
+    },
+    "./languages/cs-CZ": {
+      "require": "./languages/cs-CZ.js",
+      "import": "./languages/cs-CZ.mjs"
+    },
+    "./languages/de-CH": {
+      "require": "./languages/de-CH.js",
+      "import": "./languages/de-CH.mjs"
+    },
+    "./languages/de-DE": {
+      "require": "./languages/de-DE.js",
+      "import": "./languages/de-DE.mjs"
+    },
+    "./languages/en-US": {
+      "require": "./languages/en-US.js",
+      "import": "./languages/en-US.mjs"
+    },
+    "./languages/es-MX": {
+      "require": "./languages/es-MX.js",
+      "import": "./languages/es-MX.mjs"
+    },
+    "./languages/fr-FR": {
+      "require": "./languages/fr-FR.js",
+      "import": "./languages/fr-FR.mjs"
+    },
+    "./languages": {
+      "require": "./languages/index.js",
+      "import": "./languages/index.mjs"
+    },
+    "./languages/it-IT": {
+      "require": "./languages/it-IT.js",
+      "import": "./languages/it-IT.mjs"
+    },
+    "./languages/ja-JP": {
+      "require": "./languages/ja-JP.js",
+      "import": "./languages/ja-JP.mjs"
+    },
+    "./languages/ko-KR": {
+      "require": "./languages/ko-KR.js",
+      "import": "./languages/ko-KR.mjs"
+    },
+    "./languages/lv-LV": {
+      "require": "./languages/lv-LV.js",
+      "import": "./languages/lv-LV.mjs"
+    },
+    "./languages/nb-NO": {
+      "require": "./languages/nb-NO.js",
+      "import": "./languages/nb-NO.mjs"
+    },
+    "./languages/nl-NL": {
+      "require": "./languages/nl-NL.js",
+      "import": "./languages/nl-NL.mjs"
+    },
+    "./languages/pl-PL": {
+      "require": "./languages/pl-PL.js",
+      "import": "./languages/pl-PL.mjs"
+    },
+    "./languages/pt-BR": {
+      "require": "./languages/pt-BR.js",
+      "import": "./languages/pt-BR.mjs"
+    },
+    "./languages/ru-RU": {
+      "require": "./languages/ru-RU.js",
+      "import": "./languages/ru-RU.mjs"
+    },
+    "./languages/sr-SP": {
+      "require": "./languages/sr-SP.js",
+      "import": "./languages/sr-SP.mjs"
+    },
+    "./languages/zh-CN": {
+      "require": "./languages/zh-CN.js",
+      "import": "./languages/zh-CN.mjs"
+    },
+    "./languages/zh-TW": {
+      "require": "./languages/zh-TW.js",
+      "import": "./languages/zh-TW.mjs"
+    },
+    "./editors/autocompleteEditor/index.d.ts": "./editors/autocompleteEditor/index.d.ts",
+    "./editors/autocompleteEditor": {
+      "require": "./editors/autocompleteEditor/index.js",
+      "import": "./editors/autocompleteEditor/index.mjs"
+    },
+    "./editors/baseEditor/index.d.ts": "./editors/baseEditor/index.d.ts",
+    "./editors/baseEditor": {
+      "require": "./editors/baseEditor/index.js",
+      "import": "./editors/baseEditor/index.mjs"
+    },
+    "./editors/checkboxEditor/index.d.ts": "./editors/checkboxEditor/index.d.ts",
+    "./editors/checkboxEditor": {
+      "require": "./editors/checkboxEditor/index.js",
+      "import": "./editors/checkboxEditor/index.mjs"
+    },
+    "./editors/dateEditor/index.d.ts": "./editors/dateEditor/index.d.ts",
+    "./editors/dateEditor": {
+      "require": "./editors/dateEditor/index.js",
+      "import": "./editors/dateEditor/index.mjs"
+    },
+    "./editors/dropdownEditor/index.d.ts": "./editors/dropdownEditor/index.d.ts",
+    "./editors/dropdownEditor": {
+      "require": "./editors/dropdownEditor/index.js",
+      "import": "./editors/dropdownEditor/index.mjs"
+    },
+    "./editors/handsontableEditor/index.d.ts": "./editors/handsontableEditor/index.d.ts",
+    "./editors/handsontableEditor": {
+      "require": "./editors/handsontableEditor/index.js",
+      "import": "./editors/handsontableEditor/index.mjs"
+    },
+    "./editors/numericEditor/index.d.ts": "./editors/numericEditor/index.d.ts",
+    "./editors/numericEditor": {
+      "require": "./editors/numericEditor/index.js",
+      "import": "./editors/numericEditor/index.mjs"
+    },
+    "./editors/passwordEditor/index.d.ts": "./editors/passwordEditor/index.d.ts",
+    "./editors/passwordEditor": {
+      "require": "./editors/passwordEditor/index.js",
+      "import": "./editors/passwordEditor/index.mjs"
+    },
+    "./editors/selectEditor/index.d.ts": "./editors/selectEditor/index.d.ts",
+    "./editors/selectEditor": {
+      "require": "./editors/selectEditor/index.js",
+      "import": "./editors/selectEditor/index.mjs"
+    },
+    "./editors/textEditor/index.d.ts": "./editors/textEditor/index.d.ts",
+    "./editors/textEditor": {
+      "require": "./editors/textEditor/index.js",
+      "import": "./editors/textEditor/index.mjs"
+    },
+    "./editors/timeEditor/index.d.ts": "./editors/timeEditor/index.d.ts",
+    "./editors/timeEditor": {
+      "require": "./editors/timeEditor/index.js",
+      "import": "./editors/timeEditor/index.mjs"
+    },
+    "./editors/index.d.ts": "./editors/index.d.ts",
+    "./editors": {
+      "require": "./editors/index.js",
+      "import": "./editors/index.mjs"
+    },
+    "./editors/registry.d.ts": "./editors/registry.d.ts",
+    "./editors/registry": {
+      "require": "./editors/registry.js",
+      "import": "./editors/registry.mjs"
+    },
+    "./plugins/autoColumnSize/index.d.ts": "./plugins/autoColumnSize/index.d.ts",
+    "./plugins/autoColumnSize": {
+      "require": "./plugins/autoColumnSize/index.js",
+      "import": "./plugins/autoColumnSize/index.mjs"
+    },
+    "./plugins/autofill/index.d.ts": "./plugins/autofill/index.d.ts",
+    "./plugins/autofill": {
+      "require": "./plugins/autofill/index.js",
+      "import": "./plugins/autofill/index.mjs"
+    },
+    "./plugins/autoRowSize/index.d.ts": "./plugins/autoRowSize/index.d.ts",
+    "./plugins/autoRowSize": {
+      "require": "./plugins/autoRowSize/index.js",
+      "import": "./plugins/autoRowSize/index.mjs"
+    },
+    "./plugins/base/index.d.ts": "./plugins/base/index.d.ts",
+    "./plugins/base": {
+      "require": "./plugins/base/index.js",
+      "import": "./plugins/base/index.mjs"
+    },
+    "./plugins/bindRowsWithHeaders/index.d.ts": "./plugins/bindRowsWithHeaders/index.d.ts",
+    "./plugins/bindRowsWithHeaders": {
+      "require": "./plugins/bindRowsWithHeaders/index.js",
+      "import": "./plugins/bindRowsWithHeaders/index.mjs"
+    },
+    "./plugins/collapsibleColumns/index.d.ts": "./plugins/collapsibleColumns/index.d.ts",
+    "./plugins/collapsibleColumns": {
+      "require": "./plugins/collapsibleColumns/index.js",
+      "import": "./plugins/collapsibleColumns/index.mjs"
+    },
+    "./plugins/columnSorting/index.d.ts": "./plugins/columnSorting/index.d.ts",
+    "./plugins/columnSorting": {
+      "require": "./plugins/columnSorting/index.js",
+      "import": "./plugins/columnSorting/index.mjs"
+    },
+    "./plugins/columnSummary/index.d.ts": "./plugins/columnSummary/index.d.ts",
+    "./plugins/columnSummary": {
+      "require": "./plugins/columnSummary/index.js",
+      "import": "./plugins/columnSummary/index.mjs"
+    },
+    "./plugins/comments/index.d.ts": "./plugins/comments/index.d.ts",
+    "./plugins/comments": {
+      "require": "./plugins/comments/index.js",
+      "import": "./plugins/comments/index.mjs"
+    },
+    "./plugins/contextMenu/index.d.ts": "./plugins/contextMenu/index.d.ts",
+    "./plugins/contextMenu": {
+      "require": "./plugins/contextMenu/index.js",
+      "import": "./plugins/contextMenu/index.mjs"
+    },
+    "./plugins/copyPaste/index.d.ts": "./plugins/copyPaste/index.d.ts",
+    "./plugins/copyPaste": {
+      "require": "./plugins/copyPaste/index.js",
+      "import": "./plugins/copyPaste/index.mjs"
+    },
+    "./plugins/customBorders/index.d.ts": "./plugins/customBorders/index.d.ts",
+    "./plugins/customBorders": {
+      "require": "./plugins/customBorders/index.js",
+      "import": "./plugins/customBorders/index.mjs"
+    },
+    "./plugins/dragToScroll/index.d.ts": "./plugins/dragToScroll/index.d.ts",
+    "./plugins/dragToScroll": {
+      "require": "./plugins/dragToScroll/index.js",
+      "import": "./plugins/dragToScroll/index.mjs"
+    },
+    "./plugins/dropdownMenu/index.d.ts": "./plugins/dropdownMenu/index.d.ts",
+    "./plugins/dropdownMenu": {
+      "require": "./plugins/dropdownMenu/index.js",
+      "import": "./plugins/dropdownMenu/index.mjs"
+    },
+    "./plugins/exportFile/index.d.ts": "./plugins/exportFile/index.d.ts",
+    "./plugins/exportFile": {
+      "require": "./plugins/exportFile/index.js",
+      "import": "./plugins/exportFile/index.mjs"
+    },
+    "./plugins/filters/index.d.ts": "./plugins/filters/index.d.ts",
+    "./plugins/filters": {
+      "require": "./plugins/filters/index.js",
+      "import": "./plugins/filters/index.mjs"
+    },
+    "./plugins/formulas/index.d.ts": "./plugins/formulas/index.d.ts",
+    "./plugins/formulas": {
+      "require": "./plugins/formulas/index.js",
+      "import": "./plugins/formulas/index.mjs"
+    },
+    "./plugins/hiddenColumns/index.d.ts": "./plugins/hiddenColumns/index.d.ts",
+    "./plugins/hiddenColumns": {
+      "require": "./plugins/hiddenColumns/index.js",
+      "import": "./plugins/hiddenColumns/index.mjs"
+    },
+    "./plugins/hiddenRows/index.d.ts": "./plugins/hiddenRows/index.d.ts",
+    "./plugins/hiddenRows": {
+      "require": "./plugins/hiddenRows/index.js",
+      "import": "./plugins/hiddenRows/index.mjs"
+    },
+    "./plugins/manualColumnFreeze/index.d.ts": "./plugins/manualColumnFreeze/index.d.ts",
+    "./plugins/manualColumnFreeze": {
+      "require": "./plugins/manualColumnFreeze/index.js",
+      "import": "./plugins/manualColumnFreeze/index.mjs"
+    },
+    "./plugins/manualColumnMove/index.d.ts": "./plugins/manualColumnMove/index.d.ts",
+    "./plugins/manualColumnMove": {
+      "require": "./plugins/manualColumnMove/index.js",
+      "import": "./plugins/manualColumnMove/index.mjs"
+    },
+    "./plugins/manualColumnResize/index.d.ts": "./plugins/manualColumnResize/index.d.ts",
+    "./plugins/manualColumnResize": {
+      "require": "./plugins/manualColumnResize/index.js",
+      "import": "./plugins/manualColumnResize/index.mjs"
+    },
+    "./plugins/manualRowMove/index.d.ts": "./plugins/manualRowMove/index.d.ts",
+    "./plugins/manualRowMove": {
+      "require": "./plugins/manualRowMove/index.js",
+      "import": "./plugins/manualRowMove/index.mjs"
+    },
+    "./plugins/manualRowResize/index.d.ts": "./plugins/manualRowResize/index.d.ts",
+    "./plugins/manualRowResize": {
+      "require": "./plugins/manualRowResize/index.js",
+      "import": "./plugins/manualRowResize/index.mjs"
+    },
+    "./plugins/mergeCells/index.d.ts": "./plugins/mergeCells/index.d.ts",
+    "./plugins/mergeCells": {
+      "require": "./plugins/mergeCells/index.js",
+      "import": "./plugins/mergeCells/index.mjs"
+    },
+    "./plugins/multiColumnSorting/index.d.ts": "./plugins/multiColumnSorting/index.d.ts",
+    "./plugins/multiColumnSorting": {
+      "require": "./plugins/multiColumnSorting/index.js",
+      "import": "./plugins/multiColumnSorting/index.mjs"
+    },
+    "./plugins/multipleSelectionHandles/index.d.ts": "./plugins/multipleSelectionHandles/index.d.ts",
+    "./plugins/multipleSelectionHandles": {
+      "require": "./plugins/multipleSelectionHandles/index.js",
+      "import": "./plugins/multipleSelectionHandles/index.mjs"
+    },
+    "./plugins/nestedHeaders/index.d.ts": "./plugins/nestedHeaders/index.d.ts",
+    "./plugins/nestedHeaders": {
+      "require": "./plugins/nestedHeaders/index.js",
+      "import": "./plugins/nestedHeaders/index.mjs"
+    },
+    "./plugins/nestedRows/index.d.ts": "./plugins/nestedRows/index.d.ts",
+    "./plugins/nestedRows": {
+      "require": "./plugins/nestedRows/index.js",
+      "import": "./plugins/nestedRows/index.mjs"
+    },
+    "./plugins/persistentState/index.d.ts": "./plugins/persistentState/index.d.ts",
+    "./plugins/persistentState": {
+      "require": "./plugins/persistentState/index.js",
+      "import": "./plugins/persistentState/index.mjs"
+    },
+    "./plugins/search/index.d.ts": "./plugins/search/index.d.ts",
+    "./plugins/search": {
+      "require": "./plugins/search/index.js",
+      "import": "./plugins/search/index.mjs"
+    },
+    "./plugins/touchScroll/index.d.ts": "./plugins/touchScroll/index.d.ts",
+    "./plugins/touchScroll": {
+      "require": "./plugins/touchScroll/index.js",
+      "import": "./plugins/touchScroll/index.mjs"
+    },
+    "./plugins/trimRows/index.d.ts": "./plugins/trimRows/index.d.ts",
+    "./plugins/trimRows": {
+      "require": "./plugins/trimRows/index.js",
+      "import": "./plugins/trimRows/index.mjs"
+    },
+    "./plugins/undoRedo/index.d.ts": "./plugins/undoRedo/index.d.ts",
+    "./plugins/undoRedo": {
+      "require": "./plugins/undoRedo/index.js",
+      "import": "./plugins/undoRedo/index.mjs"
+    },
+    "./plugins/index.d.ts": "./plugins/index.d.ts",
+    "./plugins": {
+      "require": "./plugins/index.js",
+      "import": "./plugins/index.mjs"
+    },
+    "./plugins/registry.d.ts": "./plugins/registry.d.ts",
+    "./plugins/registry": {
+      "require": "./plugins/registry.js",
+      "import": "./plugins/registry.mjs"
+    },
+    "./renderers/autocompleteRenderer/index.d.ts": "./renderers/autocompleteRenderer/index.d.ts",
+    "./renderers/autocompleteRenderer": {
+      "require": "./renderers/autocompleteRenderer/index.js",
+      "import": "./renderers/autocompleteRenderer/index.mjs"
+    },
+    "./renderers/baseRenderer/index.d.ts": "./renderers/baseRenderer/index.d.ts",
+    "./renderers/baseRenderer": {
+      "require": "./renderers/baseRenderer/index.js",
+      "import": "./renderers/baseRenderer/index.mjs"
+    },
+    "./renderers/checkboxRenderer/index.d.ts": "./renderers/checkboxRenderer/index.d.ts",
+    "./renderers/checkboxRenderer": {
+      "require": "./renderers/checkboxRenderer/index.js",
+      "import": "./renderers/checkboxRenderer/index.mjs"
+    },
+    "./renderers/htmlRenderer/index.d.ts": "./renderers/htmlRenderer/index.d.ts",
+    "./renderers/htmlRenderer": {
+      "require": "./renderers/htmlRenderer/index.js",
+      "import": "./renderers/htmlRenderer/index.mjs"
+    },
+    "./renderers/numericRenderer/index.d.ts": "./renderers/numericRenderer/index.d.ts",
+    "./renderers/numericRenderer": {
+      "require": "./renderers/numericRenderer/index.js",
+      "import": "./renderers/numericRenderer/index.mjs"
+    },
+    "./renderers/passwordRenderer/index.d.ts": "./renderers/passwordRenderer/index.d.ts",
+    "./renderers/passwordRenderer": {
+      "require": "./renderers/passwordRenderer/index.js",
+      "import": "./renderers/passwordRenderer/index.mjs"
+    },
+    "./renderers/textRenderer/index.d.ts": "./renderers/textRenderer/index.d.ts",
+    "./renderers/textRenderer": {
+      "require": "./renderers/textRenderer/index.js",
+      "import": "./renderers/textRenderer/index.mjs"
+    },
+    "./renderers/timeRenderer/index.d.ts": "./renderers/timeRenderer/index.d.ts",
+    "./renderers/timeRenderer": {
+      "require": "./renderers/timeRenderer/index.js",
+      "import": "./renderers/timeRenderer/index.mjs"
+    },
+    "./renderers/index.d.ts": "./renderers/index.d.ts",
+    "./renderers": {
+      "require": "./renderers/index.js",
+      "import": "./renderers/index.mjs"
+    },
+    "./renderers/registry.d.ts": "./renderers/registry.d.ts",
+    "./renderers/registry": {
+      "require": "./renderers/registry.js",
+      "import": "./renderers/registry.mjs"
+    },
+    "./validators/autocompleteValidator/index.d.ts": "./validators/autocompleteValidator/index.d.ts",
+    "./validators/autocompleteValidator": {
+      "require": "./validators/autocompleteValidator/index.js",
+      "import": "./validators/autocompleteValidator/index.mjs"
+    },
+    "./validators/dateValidator/index.d.ts": "./validators/dateValidator/index.d.ts",
+    "./validators/dateValidator": {
+      "require": "./validators/dateValidator/index.js",
+      "import": "./validators/dateValidator/index.mjs"
+    },
+    "./validators/numericValidator/index.d.ts": "./validators/numericValidator/index.d.ts",
+    "./validators/numericValidator": {
+      "require": "./validators/numericValidator/index.js",
+      "import": "./validators/numericValidator/index.mjs"
+    },
+    "./validators/timeValidator/index.d.ts": "./validators/timeValidator/index.d.ts",
+    "./validators/timeValidator": {
+      "require": "./validators/timeValidator/index.js",
+      "import": "./validators/timeValidator/index.mjs"
+    },
+    "./validators/index.d.ts": "./validators/index.d.ts",
+    "./validators": {
+      "require": "./validators/index.js",
+      "import": "./validators/index.mjs"
+    },
+    "./validators/registry.d.ts": "./validators/registry.d.ts",
+    "./validators/registry": {
+      "require": "./validators/registry.js",
+      "import": "./validators/registry.mjs"
+    },
+    "./i18n/index.d.ts": "./i18n/index.d.ts",
+    "./i18n": {
+      "require": "./i18n/index.js",
+      "import": "./i18n/index.mjs"
+    },
+    "./i18n/registry.d.ts": "./i18n/registry.d.ts",
+    "./i18n/registry": {
+      "require": "./i18n/registry.js",
+      "import": "./i18n/registry.mjs"
+    },
+    "./i18n/languages/ar-AR": {
+      "require": "./i18n/languages/ar-AR.js",
+      "import": "./i18n/languages/ar-AR.mjs"
+    },
+    "./i18n/languages/cs-CZ": {
+      "require": "./i18n/languages/cs-CZ.js",
+      "import": "./i18n/languages/cs-CZ.mjs"
+    },
+    "./i18n/languages/de-CH.d.ts": "./i18n/languages/de-CH.d.ts",
+    "./i18n/languages/de-CH": {
+      "require": "./i18n/languages/de-CH.js",
+      "import": "./i18n/languages/de-CH.mjs"
+    },
+    "./i18n/languages/de-DE.d.ts": "./i18n/languages/de-DE.d.ts",
+    "./i18n/languages/de-DE": {
+      "require": "./i18n/languages/de-DE.js",
+      "import": "./i18n/languages/de-DE.mjs"
+    },
+    "./i18n/languages/en-US.d.ts": "./i18n/languages/en-US.d.ts",
+    "./i18n/languages/en-US": {
+      "require": "./i18n/languages/en-US.js",
+      "import": "./i18n/languages/en-US.mjs"
+    },
+    "./i18n/languages/es-MX.d.ts": "./i18n/languages/es-MX.d.ts",
+    "./i18n/languages/es-MX": {
+      "require": "./i18n/languages/es-MX.js",
+      "import": "./i18n/languages/es-MX.mjs"
+    },
+    "./i18n/languages/fr-FR.d.ts": "./i18n/languages/fr-FR.d.ts",
+    "./i18n/languages/fr-FR": {
+      "require": "./i18n/languages/fr-FR.js",
+      "import": "./i18n/languages/fr-FR.mjs"
+    },
+    "./i18n/languages/index.d.ts": "./i18n/languages/index.d.ts",
+    "./i18n/languages": {
+      "require": "./i18n/languages/index.js",
+      "import": "./i18n/languages/index.mjs"
+    },
+    "./i18n/languages/it-IT.d.ts": "./i18n/languages/it-IT.d.ts",
+    "./i18n/languages/it-IT": {
+      "require": "./i18n/languages/it-IT.js",
+      "import": "./i18n/languages/it-IT.mjs"
+    },
+    "./i18n/languages/ja-JP.d.ts": "./i18n/languages/ja-JP.d.ts",
+    "./i18n/languages/ja-JP": {
+      "require": "./i18n/languages/ja-JP.js",
+      "import": "./i18n/languages/ja-JP.mjs"
+    },
+    "./i18n/languages/ko-KR.d.ts": "./i18n/languages/ko-KR.d.ts",
+    "./i18n/languages/ko-KR": {
+      "require": "./i18n/languages/ko-KR.js",
+      "import": "./i18n/languages/ko-KR.mjs"
+    },
+    "./i18n/languages/lv-LV.d.ts": "./i18n/languages/lv-LV.d.ts",
+    "./i18n/languages/lv-LV": {
+      "require": "./i18n/languages/lv-LV.js",
+      "import": "./i18n/languages/lv-LV.mjs"
+    },
+    "./i18n/languages/nb-NO.d.ts": "./i18n/languages/nb-NO.d.ts",
+    "./i18n/languages/nb-NO": {
+      "require": "./i18n/languages/nb-NO.js",
+      "import": "./i18n/languages/nb-NO.mjs"
+    },
+    "./i18n/languages/nl-NL.d.ts": "./i18n/languages/nl-NL.d.ts",
+    "./i18n/languages/nl-NL": {
+      "require": "./i18n/languages/nl-NL.js",
+      "import": "./i18n/languages/nl-NL.mjs"
+    },
+    "./i18n/languages/pl-PL.d.ts": "./i18n/languages/pl-PL.d.ts",
+    "./i18n/languages/pl-PL": {
+      "require": "./i18n/languages/pl-PL.js",
+      "import": "./i18n/languages/pl-PL.mjs"
+    },
+    "./i18n/languages/pt-BR.d.ts": "./i18n/languages/pt-BR.d.ts",
+    "./i18n/languages/pt-BR": {
+      "require": "./i18n/languages/pt-BR.js",
+      "import": "./i18n/languages/pt-BR.mjs"
+    },
+    "./i18n/languages/ru-RU.d.ts": "./i18n/languages/ru-RU.d.ts",
+    "./i18n/languages/ru-RU": {
+      "require": "./i18n/languages/ru-RU.js",
+      "import": "./i18n/languages/ru-RU.mjs"
+    },
+    "./i18n/languages/sr-SP": {
+      "require": "./i18n/languages/sr-SP.js",
+      "import": "./i18n/languages/sr-SP.mjs"
+    },
+    "./i18n/languages/zh-CN.d.ts": "./i18n/languages/zh-CN.d.ts",
+    "./i18n/languages/zh-CN": {
+      "require": "./i18n/languages/zh-CN.js",
+      "import": "./i18n/languages/zh-CN.mjs"
+    },
+    "./i18n/languages/zh-TW.d.ts": "./i18n/languages/zh-TW.d.ts",
+    "./i18n/languages/zh-TW": {
+      "require": "./i18n/languages/zh-TW.js",
+      "import": "./i18n/languages/zh-TW.mjs"
+    },
+    "./dist/handsontable.css": "./dist/handsontable.css",
+    "./dist/handsontable.full.css": "./dist/handsontable.full.css",
+    "./dist/handsontable.full.js": "./dist/handsontable.full.js",
+    "./dist/handsontable.full.min.css": "./dist/handsontable.full.min.css",
+    "./dist/handsontable.full.min.js": "./dist/handsontable.full.min.js",
+    "./dist/handsontable.js": "./dist/handsontable.js",
+    "./dist/handsontable.min.css": "./dist/handsontable.min.css",
+    "./dist/handsontable.min.js": "./dist/handsontable.min.js",
+    "./dist/languages/all.js": "./dist/languages/all.js",
+    "./dist/languages/all.min.js": "./dist/languages/all.min.js",
+    "./dist/languages/ar-AR.js": "./dist/languages/ar-AR.js",
+    "./dist/languages/ar-AR.min.js": "./dist/languages/ar-AR.min.js",
+    "./dist/languages/cs-CZ.js": "./dist/languages/cs-CZ.js",
+    "./dist/languages/cs-CZ.min.js": "./dist/languages/cs-CZ.min.js",
+    "./dist/languages/de-CH.js": "./dist/languages/de-CH.js",
+    "./dist/languages/de-CH.min.js": "./dist/languages/de-CH.min.js",
+    "./dist/languages/de-DE.js": "./dist/languages/de-DE.js",
+    "./dist/languages/de-DE.min.js": "./dist/languages/de-DE.min.js",
+    "./dist/languages/en-US.js": "./dist/languages/en-US.js",
+    "./dist/languages/en-US.min.js": "./dist/languages/en-US.min.js",
+    "./dist/languages/es-MX.js": "./dist/languages/es-MX.js",
+    "./dist/languages/es-MX.min.js": "./dist/languages/es-MX.min.js",
+    "./dist/languages/fr-FR.js": "./dist/languages/fr-FR.js",
+    "./dist/languages/fr-FR.min.js": "./dist/languages/fr-FR.min.js",
+    "./dist/languages/it-IT.js": "./dist/languages/it-IT.js",
+    "./dist/languages/it-IT.min.js": "./dist/languages/it-IT.min.js",
+    "./dist/languages/ja-JP.js": "./dist/languages/ja-JP.js",
+    "./dist/languages/ja-JP.min.js": "./dist/languages/ja-JP.min.js",
+    "./dist/languages/ko-KR.js": "./dist/languages/ko-KR.js",
+    "./dist/languages/ko-KR.min.js": "./dist/languages/ko-KR.min.js",
+    "./dist/languages/lv-LV.js": "./dist/languages/lv-LV.js",
+    "./dist/languages/lv-LV.min.js": "./dist/languages/lv-LV.min.js",
+    "./dist/languages/nb-NO.js": "./dist/languages/nb-NO.js",
+    "./dist/languages/nb-NO.min.js": "./dist/languages/nb-NO.min.js",
+    "./dist/languages/nl-NL.js": "./dist/languages/nl-NL.js",
+    "./dist/languages/nl-NL.min.js": "./dist/languages/nl-NL.min.js",
+    "./dist/languages/pl-PL.js": "./dist/languages/pl-PL.js",
+    "./dist/languages/pl-PL.min.js": "./dist/languages/pl-PL.min.js",
+    "./dist/languages/pt-BR.js": "./dist/languages/pt-BR.js",
+    "./dist/languages/pt-BR.min.js": "./dist/languages/pt-BR.min.js",
+    "./dist/languages/ru-RU.js": "./dist/languages/ru-RU.js",
+    "./dist/languages/ru-RU.min.js": "./dist/languages/ru-RU.min.js",
+    "./dist/languages/sr-SP.js": "./dist/languages/sr-SP.js",
+    "./dist/languages/sr-SP.min.js": "./dist/languages/sr-SP.min.js",
+    "./dist/languages/zh-CN.js": "./dist/languages/zh-CN.js",
+    "./dist/languages/zh-CN.min.js": "./dist/languages/zh-CN.min.js",
+    "./dist/languages/zh-TW.js": "./dist/languages/zh-TW.js",
+    "./dist/languages/zh-TW.min.js": "./dist/languages/zh-TW.min.js",
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./base": {
+      "import": "./base.mjs",
+      "require": "./base.js"
+    },
+    "./languages/all": {
+      "import": "./languages/index.mjs",
+      "require": "./languages/all.js"
+    },
+    "./registry": {
+      "import": "./registry.mjs",
+      "require": "./registry.js"
+    }
+  }
+}
