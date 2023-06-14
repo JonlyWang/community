@@ -49,7 +49,6 @@ def login():
     # else:
     #     # session["username"] = name 
     #     # session["password"] = password
-    #     # print(session.get("username"))
     #     return jsonify({"result": 'success',"token":"token","uid":uid})
 
     
