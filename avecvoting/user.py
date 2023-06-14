@@ -28,6 +28,8 @@ def login():
     # print(js,type(js))
     name = js.get("name", 0)
     password = js.get("password", 0)
+    print('name:',name)
+    print('password:', password)
     # print(name,type(name))
 # 查询数据库
     user = User.query.filter(User.username == name).first()
